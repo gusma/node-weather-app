@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gusma/node-weather-app#readme",
   "dependencies": {
+    "chalk": "^4.1.0",
     "request": "^2.88.2"
   }
 }

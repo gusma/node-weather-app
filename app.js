@@ -1,10 +1,11 @@
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+const chalk = require('chalk')
 
 const address = process.argv[2]
 
 if (!address) {
-    console.log('Please provide an address!')
+    console.log('\nSorry but we don\'t have any information on the place you\'re looking for. Please provide an address!\n')
 }
 
 else{ 
@@ -19,7 +20,7 @@ geocode(address, (error, {latitude, longitude, location} = {}) => {
             return console.log(error)
         }
 
-        console.log(location)
+        console.log("\nYou must be looking for " + chalk.bold(location))
         console.log(forecastData)
     
     })
